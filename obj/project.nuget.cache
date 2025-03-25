@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "KmscDPJAbbZxlgpXtTbcGHDhIrZ/zTF8lGE5b23PPEEu3hpb5mcTXH9ZegGWFaW9XN87DzZMZPQRLli1TGqGrA==",
+  "dgSpecHash": "z/Yab8KO+vmryrdRZ4PxC8Qzg9V98sIjpZlSiY7gkQ48lUz54yTLraiwHxTaVC5dcwFNMF5UozDKHqsjia215A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\phare\\OneDrive\\Bureau\\Projet Lourd\\WinFormsAppCFX\\WinFormsAppCFX.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\phare\\OneDrive\\Bureau\\Projet Lourd\\Projet-Lourd\\WinFormsAppCFX.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\phare\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\phare\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\phare\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\phare\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
+  ],
   "logs": []
 }
