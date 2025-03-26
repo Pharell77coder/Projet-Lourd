@@ -8,10 +8,11 @@ namespace WinFormsAppCFX
 {
     public partial class Form2 : Form
     {
-        private MySqlConnection conn;
         public Form2()
         {
             InitializeComponent();
+            conn = new MySqlConnection(); // Initialisation vide
         }
+
     }
 }

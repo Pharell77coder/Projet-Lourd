@@ -38,7 +38,7 @@ namespace WinFormsAppCFX
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Email", email);
 
-                MySqlDataReader reader = cmd.ExcuteReader();
+                MySqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.Read()) {
                     string storedPassword = reader["password"].ToString();
