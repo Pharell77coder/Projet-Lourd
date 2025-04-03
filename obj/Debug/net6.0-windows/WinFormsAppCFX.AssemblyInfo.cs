@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WinFormsAppCFX")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39ad0e0e3b30677bfddbb87dd9b96bf73d1a6576")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8075fa92bc67fe9c042494155b8dd50fe584665")]
 [assembly: System.Reflection.AssemblyProductAttribute("WinFormsAppCFX")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WinFormsAppCFX")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
