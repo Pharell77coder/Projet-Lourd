@@ -53,9 +53,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(191, 257);
             label2.Name = "label2";
-            label2.Size = new Size(70, 20);
+            label2.Size = new Size(98, 20);
             label2.TabIndex = 6;
-            label2.Text = "Password";
+            label2.Text = "Mot de passe";
             label2.Click += label2_Click;
             // 
             // label1
@@ -63,9 +63,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(191, 181);
             label1.Name = "label1";
-            label1.Size = new Size(75, 20);
+            label1.Size = new Size(127, 20);
             label1.TabIndex = 0;
-            label1.Text = "Username";
+            label1.Text = "Utilisateur (email)";
             label1.Click += label1_Click;
             // 
             // label3
@@ -80,18 +80,18 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(569, 171);
+            textBox1.Location = new Point(438, 171);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(114, 27);
+            textBox1.Size = new Size(245, 27);
             textBox1.TabIndex = 8;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(569, 247);
+            textBox2.Location = new Point(438, 247);
             textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(114, 27);
+            textBox2.Size = new Size(245, 27);
             textBox2.TabIndex = 9;
             // 
             // Form1
@@ -99,7 +99,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuBar;
-            ClientSize = new Size(839, 600);
+            ClientSize = new Size(900, 500);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label3);

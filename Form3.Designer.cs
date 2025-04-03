@@ -20,62 +20,68 @@
 
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnModify = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            btnModify = new Button();
+            btnDelete = new Button();
+            btnCancel = new Button();
+            btnAdd = new Button();
+            SuspendLayout();
+            // 
             // flowLayoutPanel1
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(305, 215);
-            this.flowLayoutPanel1.TabIndex = 0;
-
+            // 
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Location = new Point(153, 12);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(720, 440);
+            flowLayoutPanel1.TabIndex = 0;
+            // 
             // btnModify
-            this.btnModify.Location = new System.Drawing.Point(351, 63);
-            this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(135, 49);
-            this.btnModify.TabIndex = 1;
-            this.btnModify.Text = "Modifier";
-            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
-
+            // 
+            btnModify.Location = new Point(12, 12);
+            btnModify.Name = "btnModify";
+            btnModify.Size = new Size(135, 49);
+            btnModify.TabIndex = 1;
+            btnModify.Text = "Modifier";
+            btnModify.Click += btnModify_Click;
+            // 
             // btnDelete
-            this.btnDelete.Location = new System.Drawing.Point(492, 118);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(135, 49);
-            this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Supprimer";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-
+            // 
+            btnDelete.Location = new Point(12, 177);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(135, 49);
+            btnDelete.TabIndex = 2;
+            btnDelete.Text = "Supprimer";
+            btnDelete.Click += btnDelete_Click;
+            // 
             // btnCancel
-            this.btnCancel.Location = new System.Drawing.Point(492, 63);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(135, 49);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "Annuler";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-
+            // 
+            btnCancel.Location = new Point(12, 122);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(135, 49);
+            btnCancel.TabIndex = 3;
+            btnCancel.Text = "Annuler";
+            btnCancel.Click += btnCancel_Click;
+            // 
             // btnAdd
-            this.btnAdd.Location = new System.Drawing.Point(351, 118);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(135, 49);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Ajouter";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-
+            // 
+            btnAdd.Location = new Point(12, 67);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(135, 49);
+            btnAdd.TabIndex = 4;
+            btnAdd.Text = "Ajouter";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
+            // 
             // Form3
-            this.ClientSize = new System.Drawing.Size(659, 270);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.btnModify);
-            this.Controls.Add(this.btnCancel);
-            this.Name = "Form3";
-            this.ResumeLayout(false);
+            // 
+            ClientSize = new Size(900, 500);
+            Controls.Add(btnAdd);
+            Controls.Add(btnDelete);
+            Controls.Add(flowLayoutPanel1);
+            Controls.Add(btnModify);
+            Controls.Add(btnCancel);
+            Name = "Form3";
+            ResumeLayout(false);
         }
     }
 }

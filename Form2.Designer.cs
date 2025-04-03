@@ -37,36 +37,36 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(291, 21);
+            dataGridView1.Location = new Point(195, 21);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(488, 305);
+            dataGridView1.Size = new Size(584, 417);
             dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(32, 186);
+            button1.Location = new Point(21, 183);
             button1.Name = "button1";
             button1.Size = new Size(168, 49);
             button1.TabIndex = 1;
             button1.Text = "Gérer";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // NomDesTables
             // 
             NomDesTables.FormattingEnabled = true;
-            NomDesTables.Location = new Point(32, 35);
+            NomDesTables.Location = new Point(21, 21);
             NomDesTables.Name = "NomDesTables";
             NomDesTables.Size = new Size(150, 114);
             NomDesTables.TabIndex = 2;
             NomDesTables.SelectedIndexChanged += NomDesTables_SelectedIndexChanged;
-
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(900, 500);
             Controls.Add(NomDesTables);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
