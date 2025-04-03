@@ -1,38 +1,85 @@
-﻿#region Windows Form Designer generated code
-
-/// <summary>
-///  Required method for Designer support - do not modify
-///  the contents of this method with the code editor.
-/// </summary>
-private void InitializeComponent()
+﻿namespace Projet_Lourd
 {
-    this.label1 = new System.Windows.Forms.Label();
-    this.SuspendLayout();
-    // 
-    // label1
-    // 
-    this.label1.AutoSize = true;
-    this.label1.Location = new System.Drawing.Point(50, 50);
-    this.label1.Name = "label1";
-    this.label1.Size = new System.Drawing.Size(100, 23);
-    this.label1.TabIndex = 0;
-    this.label1.Text = "Vous avez réussi";
-    // 
-    // Form2
-    // 
-    this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-    this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-    this.ClientSize = new System.Drawing.Size(300, 200);
-    this.Controls.Add(this.label1);
-    this.Name = "Form2";
-    this.Text = "Connexion Réussie";
-    this.ResumeLayout(false);
-    this.PerformLayout();
+    partial class Form2
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            dataGridView1 = new DataGridView();
+            button1 = new Button();
+            NomDesTables = new CheckedListBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(291, 21);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(488, 305);
+            dataGridView1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(32, 186);
+            button1.Name = "button1";
+            button1.Size = new Size(168, 49);
+            button1.TabIndex = 1;
+            button1.Text = "Gérer";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // NomDesTables
+            // 
+            NomDesTables.FormattingEnabled = true;
+            NomDesTables.Location = new Point(32, 35);
+            NomDesTables.Name = "NomDesTables";
+            NomDesTables.Size = new Size(150, 114);
+            NomDesTables.TabIndex = 2;
+            NomDesTables.SelectedIndexChanged += NomDesTables_SelectedIndexChanged;
+
+            // 
+            // Form2
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(NomDesTables);
+            Controls.Add(button1);
+            Controls.Add(dataGridView1);
+            Name = "Form2";
+            Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private DataGridView dataGridView1;
+        private Button button1;
+        private CheckedListBox NomDesTables;
+    }
 }
-
-/// <summary>
-/// Label qui affiche le message de succès
-/// </summary>
-private System.Windows.Forms.Label label1;
-
-#endregion

@@ -1,10 +1,11 @@
-using System;
+﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using BCrypt.Net;
-using System.DirectoryServices;
+using Projet_Lourd;
 
-namespace WinFormsAppCFX
+namespace Projet_Lourd
 {
     public partial class Form1 : Form
     {
@@ -16,21 +17,23 @@ namespace WinFormsAppCFX
         private void button1_Click(object sender, EventArgs e)
         {
             string email = textBox1.Text;
-            string password =  textBox2.Text;
+            string password = textBox2.Text;
 
-            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password)) {
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+            {
                 MessageBox.Show("Veuillez remplir toutes les informations.");
-                return; 
+                return;
             }
 
             string servername = "localhost";
-            string dbname = "bdd";
+            string dbname = "bdd_commerce";
             string dbusername = "root";
             string dbpassword = "";
 
             string connectionString = $"server={servername};database={dbname};uid={dbusername};pwd={dbpassword}";
 
-            try {
+            try
+            {
                 conn = new MySqlConnection(connectionString);
                 conn.Open();
 
@@ -40,24 +43,35 @@ namespace WinFormsAppCFX
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
-                if (reader.Read()) {
+                if (reader.Read())
+                {
                     string storedPassword = reader["password"].ToString();
 
-                    if (BCrypt.Net.BCrypt.Verify(password, storedPassword)){
-                        MessageBox.Show("Connexion réussie !");
+                    if (BCrypt.Net.BCrypt.Verify(password, storedPassword))
+                    {
+                        MessageBox.Show("Connexion r�ussie !");
                         Form2 form2 = new Form2();
                         form2.Show();
                         this.Hide();
-                    } else {
+                    }
+                    else
+                    {
                         MessageBox.Show("mot de passe incorrect.");
                     }
-                } else {
-                    MessageBox.Show("Email non trouvé.");
                 }
-            } catch(Exception ex){
-                MessageBox.Show("Erreur de connexion : "+ ex.Message);
-            } finally {
-                if (conn != null && conn.State == System.Data.ConnectionState.Open) {
+                else
+                {
+                    MessageBox.Show("Email non trouv�.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur de connexion : " + ex.Message);
+            }
+            finally
+            {
+                if (conn != null && conn.State == System.Data.ConnectionState.Open)
+                {
                     conn.Close();
                 }
             }
@@ -70,6 +84,69 @@ namespace WinFormsAppCFX
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string email = textBox1.Text;
+            string password = textBox2.Text;
+
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("Veuillez remplir toutes les informations.");
+                return;
+            }
+
+            string servername = "localhost";
+            string dbname = "bdd_commerce";
+            string dbusername = "root";
+            string dbpassword = "";
+
+            string connectionString = $"server={servername};database={dbname};uid={dbusername};pwd={dbpassword}";
+
+            try
+            {
+                conn = new MySqlConnection(connectionString);
+                conn.Open();
+
+                string query = "SELECT * FROM users WHERE email = @Email";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Email", email);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    string storedPassword = reader["password"].ToString();
+
+                    if (BCrypt.Net.BCrypt.Verify(password, storedPassword))
+                    {
+                        MessageBox.Show("Connexion r�ussie !");
+                        Form2 form2 = new Form2();
+                        form2.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("mot de passe incorrect.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Email non trouv�.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur de connexion : " + ex.Message);
+            }
+            finally
+            {
+                if (conn != null && conn.State == System.Data.ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
         }
     }
 }

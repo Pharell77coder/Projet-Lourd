@@ -1,4 +1,4 @@
-namespace WinFormsAppCFX
+namespace Projet_Lourd
 {
     internal static class Program
     {
